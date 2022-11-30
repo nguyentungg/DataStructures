@@ -65,6 +65,16 @@ class LinkedList {
       }
       return currentNode;
     }
+
+    pop(){
+      let retval = 0;
+      let nextNode = this.head.next;
+      retval = this.head.value;
+      this.head = nextNode;
+      this.length--;
+      return retval;
+    }
+
     remove(index) {
       // Check Parameters      
       const leader = this.traverseToIndex(index-1);
@@ -94,7 +104,7 @@ class LinkedList {
     }
 }
 
-let myLinkedList = new LinkedList(10);
+let myLinkedList = new LinkedList(2); // This is the first value of linked list not the size of the list
 myLinkedList.append(5)
 myLinkedList.append(16)
 myLinkedList.prepend(1)
@@ -104,4 +114,5 @@ myLinkedList.insert(20, 88)
 myLinkedList.printList()
 myLinkedList.remove(2)
 myLinkedList.reverse()
+myLinkedList.pop()
 myLinkedList.printList()

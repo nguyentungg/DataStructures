@@ -109,6 +109,7 @@ public:
 
         while (current != nullptr) {
             std::cout << current->value << std::endl;
+            // std::cout << "\r" << current->value;
             current = current->next;
         }
     }
