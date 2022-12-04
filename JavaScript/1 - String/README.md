@@ -16,7 +16,17 @@ String padEnd()
 String charAt()
 String charCodeAt()
 String split()
-
+String at()
+String endsWith()
+String fromCharCode()
+String fromCodePoint()
+String includes()
+String indexOf()
+String lastIndexOf()
+String localeCompare()
+String match()
+String matchAll()
+String normalize()
 # Data Structure and Algorithm Lab
 If you love this repository you can join with me on Data Structure and Algorithm Lab.
 
