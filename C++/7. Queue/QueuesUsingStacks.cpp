@@ -1,6 +1,8 @@
-#include <iostream>;
-#include <cstdlib>;
+#include <iostream>
+#include <cstdlib>
+#include <stack>
 
+using namespace std;
 class MyQueue {
     
 private:
