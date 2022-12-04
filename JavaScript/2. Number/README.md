@@ -1,26 +1,26 @@
 # JavaScripts Number Methods
 ## I. Methods
-Number isFinite()
-Number isInteger()
-Number isNaN()
-Number isSafeInteger()
-Number parseFloat()
-Number parseInt()
-Number toExponential()
-Number toFixed()
-Number toLocaleString()
-Number toPrecision()
-Number toString()
+Number isFinite() \
+Number isInteger() \
+Number isNaN() \
+Number isSafeInteger() \
+Number parseFloat() \
+Number parseInt() \
+Number toExponential() \
+Number toFixed() \
+Number toLocaleString() \
+Number toPrecision() \
+Number toString() \
 Number valueOf()
 
 ## II. Properties
-Number EPSILON
-Number MAX_SAFE_INTEGER
-Number MAX_VALUE
-Number MIN_SAFE_INTEGER
-Number MIN_VALUE
-Number NaN
-Number NEGATIVE_INFINITY
+Number EPSILON \
+Number MAX_SAFE_INTEGER \
+Number MAX_VALUE \
+Number MIN_SAFE_INTEGER \
+Number MIN_VALUE \
+Number NaN \
+Number NEGATIVE_INFINITY \
 Number POSITIVE_INFINITY
 
 *NOTE*
