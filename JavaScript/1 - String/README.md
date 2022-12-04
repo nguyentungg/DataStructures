@@ -17,6 +17,7 @@ String charAt()
 String charCodeAt()
 String split()
 String at()
+String startsWith()
 String endsWith()
 String fromCharCode()
 String fromCodePoint()
@@ -27,6 +28,9 @@ String localeCompare()
 String match()
 String matchAll()
 String normalize()
+String raw() 
+String repeat() 
+String search() 
 # Data Structure and Algorithm Lab
 If you love this repository you can join with me on Data Structure and Algorithm Lab.
 

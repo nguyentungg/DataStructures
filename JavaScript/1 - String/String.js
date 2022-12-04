@@ -157,6 +157,14 @@ console.log(`Using an index of ${index} the character returned is ${sentence.at(
 // expected output: "Using an index of -4 the character returned is d"
 
 
+//>> startsWith()
+const str1 = 'Saturday night plans';
+console.log(str1.startsWith('Sat'));
+// expected output: true
+console.log(str1.startsWith('Sat', 3));
+// expected output: false
+
+
 //>> endsWith()
 const str1 = 'Cats are the best!';
 console.log(str1.endsWith('best!'));
@@ -231,20 +239,40 @@ console.log(array[1]);
 //>> normalize()
 const name1 = '\u0041\u006d\u00e9\u006c\u0069\u0065';
 const name2 = '\u0041\u006d\u0065\u0301\u006c\u0069\u0065';
-
 console.log(`${name1}, ${name2}`);
 // expected output: "Amélie, Amélie"
 console.log(name1 === name2);
 // expected output: false
 console.log(name1.length === name2.length);
 // expected output: false
-
 const name1NFC = name1.normalize('NFC');
 const name2NFC = name2.normalize('NFC');
-
 console.log(`${name1NFC}, ${name2NFC}`);
 // expected output: "Amélie, Amélie"
 console.log(name1NFC === name2NFC);
 // expected output: true
 console.log(name1NFC.length === name2NFC.length);
 // expected output: true
+
+//>> raw()
+// Create a variable that uses a Windows
+// path without escaping the backslashes:
+const filePath = String.raw`C:\Development\profile\aboutme.html`;
+console.log(`The file was uploaded from: ${filePath}`);
+// expected output: "The file was uploaded from: C:\Development\profile\aboutme.html"
+
+
+//>> repeat()
+const chorus = 'Because I\'m happy. ';
+console.log(`Chorus lyrics for "Happy": ${chorus.repeat(27)}`);
+// expected output: "Chorus lyrics for "Happy": Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. Because I'm happy. "
+
+
+//>> search()
+const paragraph = 'The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?';
+// any character that is not a word character or whitespace
+const regex = /[^\w\s]/g;
+console.log(paragraph.search(regex));
+// expected output: 43
+console.log(paragraph[paragraph.search(regex)]);
+// expected output: "."
