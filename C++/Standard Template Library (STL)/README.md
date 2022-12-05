@@ -49,10 +49,7 @@ Container adaptors provide a different interface for sequential containers.
 
 ![Unordered Associative Containers 2](https://media.geeksforgeeks.org/wp-content/uploads/20191111161627/Screenshot-from-2019-11-11-16-15-07.png)
 
-![Unordered Associative Containers 3](https://photos.app.goo.gl/5jj26NUppJo3F7hUA)
-
-![Unordered Associative Containers 4](https://flic.kr/ps/41dJz9)
-
+[More C++ Containers Information](https://en.cppreference.com/w/cpp/container)
 
 # Data Structure and Algorithm Lab
 If you love this repository you can join with me on Data Structure and Algorithm Lab.
