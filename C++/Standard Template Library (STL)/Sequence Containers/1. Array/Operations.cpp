@@ -55,6 +55,6 @@ public:
 int main()
 {
     MyOperations myarray;
-
+    myarray.Fill();
     return 0;
 }
