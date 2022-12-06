@@ -28,22 +28,21 @@ Associative containers implement sorted data structures that can be quickly sear
 ### **Unordered associative containers (since C++11)**
 Unordered associative containers implement unsorted (hashed) data structures that can be quickly searched (O(1) amortized, O(n) worst-case complexity).
 
-    - unordered_set(C++11)        =>	collection of unique keys, hashed by keys(class template)
-    - unordered_map(C++11)        =>	collection of key-value pairs, hashed by keys,  keys are unique(class template)
-    - unordered_multiset(C++11)   =>	collection of keys, hashed by keys(class  template)
-    - unordered_multimap(C++11)   =>	collection of key-value pairs, hashed by keys(class template)
+    - unordered_set(C++11)        =>   collection of unique keys, hashed by keys(class template)
+    - unordered_map(C++11)        =>   collection of key-value pairs, hashed by keys,  keys are unique(class template)
+    - unordered_multiset(C++11)   =>   collection of keys, hashed by keys(class template)
+    - unordered_multimap(C++11)   =>   collection of key-value pairs, hashed by keys(class template)
 
 ### **Container adaptors**
 Container adaptors provide a different interface for sequential containers.
 
-    - stack   => adapts a container to provide stack (LIFO data structure)(class    template)
-    - queue   => adapts a container to provide queue (FIFO data structure)(class    template)
-    - priority_queue  => adapts a container to provide priority queue
-    (class template)
-    - flat_set(C++23) => adapts a container to provide a collection of unique   keys, sorted by keys(class template)
-    - flat_map(C++23) => adapts a container to provide a collection of key-value    pairs, sorted by unique keys(class template)
-    - flat_multiset(C++23)    => adapts a container to provide a collection of  keys, sorted by keys(class template)
-    - flat_multimap(C++23)    => adapts a container to provide a collection of  key-value pairs, sorted by keys(class template)
+    - stack   => adapts a container to provide stack (LIFO data structure)(class template)
+    - queue   => adapts a container to provide queue (FIFO data structure)(class template)
+    - priority_queue        =>  adapts a container to provide priority queue(class template)
+    - flat_set(C++23)       =>  adapts a container to provide a collection of unique keys, sorted by keys(class template)
+    - flat_map(C++23)       =>  adapts a container to provide a collection of key-value pairs, sorted by unique keys(class template)
+    - flat_multiset(C++23)  =>  adapts a container to provide a collection of keys, sorted by keys(class template)
+    - flat_multimap(C++23)  =>  adapts a container to provide a collection of key-value pairs, sorted by keys(class template)
 
 ![Unordered Associative Containers 1](https://media.geeksforgeeks.org/wp-content/uploads/20191111161536/Screenshot-from-2019-11-11-16-13-18.png)
 
