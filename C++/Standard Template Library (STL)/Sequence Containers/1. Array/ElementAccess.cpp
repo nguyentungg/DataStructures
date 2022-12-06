@@ -4,7 +4,7 @@
 #include <span>
 
 using namespace std;
-class MyArray
+class MyElementAccess
 {
 
 public:
@@ -117,7 +117,7 @@ public:
 
 int main()
 {
-    MyArray myarray;
+    MyElementAccess myarray;
     myarray.At();
 
     return 0;
