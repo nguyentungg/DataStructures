@@ -13,13 +13,17 @@ vector<int> v (3,100); // => 100 100 100
 unsigned int size = v.size();
 v.resize(5); // resize vector to 5 element
 v.resize(8,100); // resize vector to 8 and fill 100 until it reach 8 elements. Ex: 1 2 3 4 5 100 100 100
-v.resize(12); // resize vector to 12 and no fill. Ex: 1 2 3 4 5 100 100 100 0 0 0 0
+v.resize(12); // resize vector to 12 and no fill with 0(or null). Ex: 1 2 3 4 5 100 100 100 0 0 0 0
 
 // Insert head, index, tail
-v.insert(v.begin(), value);                 // head
-v.insert(v.begin() + index, value);         // index
-v.insert (v.end(), numberOfTimes, value);   // Add a number of times value
-v.push_back(value);                         // tail
+v.insert(v.begin(), value);                         // head
+v.insert(v.begin() + index, value);                 // index
+v.insert (v.end(), numberOfTimes, value);           // Add a number of times value
+v.assign (numberOfTimes, value);                    // Add a number of times value (remove all exit elements)
+v.assign (array,array + array size);                // assigning from array. (remove all exit elements)
+v.emplace (v.begin()/v.end() + index, value);       // Insert value between 2 elements at index (will not remote exit elements)
+v.emplace_back (value);                             // tail
+v.push_back(value);                                 // tail
 
 // Access head, index, tail
 int head = v.front();       // head, returns a reference to the first element 
@@ -48,6 +52,8 @@ v.swap(other);
 // Clear
 v.clear();
 
+// Is Empty?
+v.empty()
 
 // allocate an array with space for 5 elements using vector's allocator:
 p = v.get_allocator().allocate(5);
@@ -59,3 +65,4 @@ v.get_allocator().deallocate(p,5);
 
 v.shrink_to_fit(); // Requests the container to reduce its capacity to fit its size. 
 v.reserve(100);   // make vector capacity be at least enough to contain n elements.
+
