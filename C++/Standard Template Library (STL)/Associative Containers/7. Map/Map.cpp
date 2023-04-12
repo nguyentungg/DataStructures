@@ -23,10 +23,10 @@ if (it.second == false) {
 // Access
 std::string value = m.at('key');
 it=m.lower_bound ('key');   // Returns an iterator pointing to the first element whose key is not considered to go BEFORE key.
-it=m.upper_bound ('d');     // Returns an iterator pointing to the first element whose key is considered to go AFTER key.
+it=m.upper_bound ('key');     // Returns an iterator pointing to the first element whose key is considered to go AFTER key.
 // optional:  it->first as key ; it->second as value
 m.equal_range('key');       // Returns the bounds of a range that includes all the elements which have a key equivalent to key.
-
+                            // Because the elements in a map container have unique keys, the range returned will contain a single element at most.
 // Size
 unsigned int size = m.size();
 
