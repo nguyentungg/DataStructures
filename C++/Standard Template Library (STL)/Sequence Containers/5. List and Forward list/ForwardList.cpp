@@ -62,18 +62,18 @@ fl1.splice_after( fl1.before_begin(), fl2, fl2.begin()); // fl1: 1 10 20 | 30 3 
 // *Notice that what is moved is AFTER the iterator
 
 // Remove: Remove an element by value ( erase remove elements by their position (using an iterator))
-l.remove(value);
-l.remove_if (single_digit); //EX: bool single_digit (const int& value) { return (value<10); }
+fl.remove(value);
+fl.remove_if (single_digit); //EX: bool single_digit (const int& value) { return (value<10); }
 
 // Unique: Remove duplicates
-l.unique();
+fl.unique();
 
-// Merge: Merge two sorted lists and inserts them into their ordered position (Both containers shall already be ordered by l.sort().)
-l.merge(list2);
-l1.merge(l2,mycomparison); // bool mycomparison (double first, double second){ return ( int(first)<int(second) ); }
+// Merge: Merge two sorted forward list and inserts them into their ordered position (Both containers shall already be ordered by fl.sort().)
+fl.merge(list2);
+fl1.merge(l2,mycomparison); // bool mycomparison (double first, double second){ return ( int(first)<int(second) ); }
 
-// Sort: Sort the list
-l.sort();
+// Sort: Sort the forward list
+fl.sort();
 
-// Reverse: Reverse the list order (still ok with not ordered list)
-l.reverse();
+// Reverse: Reverse the forward list order (still ok with not ordered forward list)
+fl.reverse();
