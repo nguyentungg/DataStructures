@@ -12,6 +12,7 @@
 //   but they allow the direct iteration on subsets based on their order.
 
 // - Implemented as 'binary search trees'.
+#include <map>
 
 std::multimap<std::string, std::string> mul, mtmo;
 std::multimap<char,int>::iterator it;
