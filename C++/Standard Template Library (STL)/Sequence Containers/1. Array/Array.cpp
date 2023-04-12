@@ -30,3 +30,6 @@ for (int i=0; i<10; i++) myarray.at(i) = i+1;
 
 // Exchanges 
 a.swap (a2); //exchange data between two arrays.
+
+// Is Empty ?
+a.empty()
