@@ -1,3 +1,6 @@
+//---------------------------------------------------------
+// List containers are implemented as Doubly-Linked Lists
+//--------------------------------------------------------
 std::list<int> l, l1 , l2;
 std::list<int>::iterator it;
 //---------------------------------
@@ -10,9 +13,10 @@ l.insert(l.begin() + index, value);     // index
 l.push_back(value);                     // tail
 
 // Access head, index, tail
-int head = l.front();                                           // head
-int value = std::next(l.begin(), index);		        // index
-int tail = l.back();                                            // tail
+int head = l.front();                           // head
+it = std::next(l.begin(), index);		        // index
+it = std::prev(l.end());		                // tail
+int tail = l.back();                            // tail
 
 // Size
 unsigned int size = l.size();
@@ -43,7 +47,7 @@ l.clear();
 //      l2: 10 20 30
 it = l1.begin();        // it = 1
 it++;                   // it points to 2 (=2)
-l1.splice (l1.begin(), l2);
+l1.splice (l1.begin(), l2); // Remove elements from l2 and add to l1
 // l1: 1 10 20 30 2 3 4
 // l2 (empty)
 l2.splice (l2.begin(), l1, it);
@@ -62,12 +66,12 @@ l.remove_if (single_digit); //EX: bool single_digit (const int& value) { return 
 // Unique: Remove duplicates
 l.unique();
 
-// Merge: Merge two sorted lists
+// Merge: Merge two sorted lists and inserts them into their ordered position (Both containers shall already be ordered by l.sort().)
 l.merge(list2);
 l1.merge(l2,mycomparison); // bool mycomparison (double first, double second){ return ( int(first)<int(second) ); }
 
 // Sort: Sort the list
 l.sort();
 
-// Reverse: Reverse the list order
+// Reverse: Reverse the list order (still ok with not ordered list)
 l.reverse();
