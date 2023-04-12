@@ -1,6 +1,8 @@
 //---------------------------------
 // General Informations
 //---------------------------------
+// - Allow Duplicate
+
 // -`Multimap` keep all their elements sorted. The elements in a `multimap` are always sorted by its key.
 
 // - In a 'multimap', the key values are generally used to sort and uniquely identify the elements, 
@@ -22,8 +24,8 @@ std::multimap<char,int>::iterator it;
 mtm.insert (mtm.begin()/it, std::pair<char,int>("key","value"));        // index (insert after index)
 mtmo.insert(m1.begin(),m1.find("key"));                             // index (move a range of mtm1 to mtmo)
 mtm.insert(std::pair<std::string, std::string>("key","value"));  // tail
-mtm.emplace("key", "value");                                          // tail (key must unique) (auto sort)
-mtm.emplace_hint(mtm.begin()/it, "key", "value");                       // tail (key must unique) with a a hint on the insertion position (auto sort)
+mtm.emplace("key", "value");                                          // tail (allow duplicate key) (auto sort)
+mtm.emplace_hint(mtm.begin()/it, "key", "value");                       // tail (allow duplicate key) with a a hint on the insertion position (auto sort)
 
 
 // Checking
@@ -47,6 +49,20 @@ unsigned int size = mtm.size();
 for(std::multimap<std::string, std::string>::iterator it = mtm.begin(); it != mtm.end(); it++) {
     std::cout << (*it).first << " " << (*it).second << std::endl;
 }
+for (char ch='a'; ch<='d'; ch++)
+{
+    pair <multimap<char,int>::iterator, multimap<char,int>::iterator> ret;
+    ret = mymm.equal_range(ch);
+    cout << ch << " =>";
+    for (multimap<char,int>::iterator it=ret.first; it!=ret.second; ++it)
+      cout << ' ' << it->second;
+    cout << '\n';
+}
+// mymm contains:
+// a => 10
+// b => 20 30 40
+// c => 50 60
+// d => 60
 
 // Remove by key
 it=mtm.find("key");

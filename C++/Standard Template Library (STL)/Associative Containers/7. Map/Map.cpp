@@ -1,3 +1,8 @@
+//---------------------------------
+// General Informations
+//---------------------------------
+// - Not allow duplicate, Key must be unique
+
 std::map<std::string, std::string> m, mo;
 std::pair<std::map<char,int>::iterator,bool> it;
 //---------------------------------
