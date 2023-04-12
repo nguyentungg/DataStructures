@@ -16,6 +16,7 @@ a.back();                   // tail
 // Insert head, index, tail
 a[index]= value;
 a.at(index) = value;
+a.front() = value;          // replace head with a value
 a.back() = value;           // replace tail with a value
 a.fill(value);              // set val as the value for all the elements in the array.
 
