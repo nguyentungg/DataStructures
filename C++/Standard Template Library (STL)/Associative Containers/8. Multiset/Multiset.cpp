@@ -10,9 +10,9 @@
 
 #include <set>
 
-std::set<int> s, so;
-std::set<int>::iterator it;
-std::pair<std::set<int>::iterator,bool> ret; // Pair of values. Values can be accessed through its public members `first` and `second`.
+std::multiset<int> s, so;
+std::multiset<int>::iterator it;
+std::pair<std::multiset<int>::iterator,bool> ret; // Pair of values. Values can be accessed through its public members `first` and `second`.
 //---------------------------------
 // General Operations
 //---------------------------------
@@ -38,7 +38,7 @@ it = s.find(value);
 unsigned int size = s.size();
 
 // Iterate
-for(std::set<int>::iterator it = s.begin(); it != s.end(); it++) {
+for(std::multiset<int>::iterator it = s.begin(); it != s.end(); it++) {
     std::cout << *it << std::endl;
 }
 for (const std::string& x: s)
@@ -62,19 +62,19 @@ s.clear();
 //---------------------------------
 
 // key_comp
-std::set<int>::key_compare mycomp = s.key_comp();
+std::multiset<int>::key_compare mycomp = s.key_comp();
 int highest;
 
 highest=*s.rbegin();
-std::set<int>::iterator it=s.begin();
+std::multiset<int>::iterator it=s.begin();
 do {
   std::cout << ' ' << *it;
 } while ( mycomp(*(++it),highest) );
 
 // value_comp
-std::set<int>::value_compare mycomp = s.value_comp();
+std::multiset<int>::value_compare mycomp = s.value_comp();
 int highest=*s.rbegin();
-std::set<int>::iterator it=s.begin();
+std::multiset<int>::iterator it=s.begin();
 do {
   std::cout << ' ' << *it;
 } while ( mycomp(*(++it),highest) );
@@ -92,7 +92,7 @@ it = s.find(value);
 unsigned int count = s.count(value);
 
 // lower_bound & upper_bound
-std::set<int>::iterator itlow,itup;
+std::multiset<int>::iterator itlow,itup;
                                              // 10 20 30 40 50 60 70 80 90
 itlow=myset.lower_bound (30);                //        ^
 itup=myset.upper_bound (60);                 //                    ^
@@ -101,7 +101,7 @@ s.erase(itlow,itup);                         // 10 20             70 80 90
 
 // Get range of equal elements
 // *Note: Because all elements in a set container are unique, the range returned will contain a single element at most.
-std::pair<std::set<int>::const_iterator std::set<int>::const_iterator> ret;
+std::pair<std::multiset<int>::const_iterator std::multiset<int>::const_iterator> ret;
 ret = myset.equal_range(30);
 //Get
 std::cout << "the lower bound points to: " << *ret.first << '\n';   //the lower bound points to: 30

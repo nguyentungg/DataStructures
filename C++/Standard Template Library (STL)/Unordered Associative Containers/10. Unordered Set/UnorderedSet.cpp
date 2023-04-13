@@ -64,19 +64,19 @@ s.clear();
 //---------------------------------
 
 // key_comp
-std::set<int>::key_compare mycomp = s.key_comp();
+std::unordered_set<int>::key_compare mycomp = s.key_comp();
 int highest;
 
 highest=*s.rbegin();
-std::set<int>::iterator it=s.begin();
+std::unordered_set<int>::iterator it=s.begin();
 do {
   std::cout << ' ' << *it;
 } while ( mycomp(*(++it),highest) );
 
 // value_comp
-std::set<int>::value_compare mycomp = s.value_comp();
+std::unordered_set<int>::value_compare mycomp = s.value_comp();
 int highest=*s.rbegin();
-std::set<int>::iterator it=s.begin();
+std::unordered_set<int>::iterator it=s.begin();
 do {
   std::cout << ' ' << *it;
 } while ( mycomp(*(++it),highest) );
@@ -104,7 +104,7 @@ for (auto& x: {"hat","sunglasses","suit","t-shirt"}) {
 }
 
 // lower_bound & upper_bound
-std::set<int>::iterator itlow,itup;
+std::unordered_set<int>::iterator itlow,itup;
                                              // 10 20 30 40 50 60 70 80 90
 itlow=s.lower_bound (30);                //        ^
 itup=s.upper_bound (60);                 //                    ^
@@ -112,7 +112,7 @@ s.erase(itlow,itup);                         // 10 20             70 80 90
 
 // equal_range
 // *Note: Because all elements in a set container are unique, the range returned will contain a single element at most.
-std::pair<std::set<int>::const_iterator std::set<int>::const_iterator> ret;
+std::pair<std::unordered_set<int>::const_iterator std::unordered_set<int>::const_iterator> ret;
 ret = s.equal_range(30);
 //Get
 std::cout << "the lower bound points to: " << *ret.first << '\n';   //the lower bound points to: 30
