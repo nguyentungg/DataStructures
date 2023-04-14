@@ -15,10 +15,13 @@ std::priority_queue<int> q, qo;
 // Insert
 q.push(value);
 q.emplace ("value");        // tail
+q.push_range(begin, end)              // Push range (C++23)
+	
 
 // Access head, tail
 int head = q.front();       // head
 int tail = q.back();        // tail
+q.top()                     // head
 
 //Iterate
 while (!q.empty())
